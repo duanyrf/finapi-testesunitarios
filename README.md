@@ -8,8 +8,14 @@
 - jest
 - @types/jest
 - ts-jest
+- dotenv
 
 ## Configuração de dependências
+
+**dotEnv**
+1. Importar no topo do arquivo de configuração da autenticação (_config/auth.ts_): `import 'dotenv/config'`;
+
+Agora já podemos utilizar as variáveis de ambiente do arquivo _.env_.
 
 **Jest**
 1. Rodar `yarn jest --init`;
