@@ -8,7 +8,7 @@ enum OperationType {
   WITHDRAW = 'withdraw',
 }
 
-export class CreateStatementController {
+class CreateStatementController {
   async execute(request: Request, response: Response) {
     const { id: user_id } = request.user;
     const { amount, description } = request.body;
@@ -28,3 +28,5 @@ export class CreateStatementController {
     return response.status(201).json(statement);
   }
 }
+
+export {OperationType, CreateStatementController}
