@@ -1,12 +1,8 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+import { OperationType } from '../../entities/Statement';
 
 import { CreateStatementUseCase } from './CreateStatementUseCase';
-
-enum OperationType {
-  DEPOSIT = 'deposit',
-  WITHDRAW = 'withdraw',
-}
 
 class CreateStatementController {
   async execute(request: Request, response: Response) {
@@ -29,4 +25,4 @@ class CreateStatementController {
   }
 }
 
-export {OperationType, CreateStatementController}
+export { CreateStatementController }
